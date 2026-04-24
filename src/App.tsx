@@ -26,15 +26,14 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
       <div className="container flex justify-between items-center" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
           <img 
             src="/logo.png" 
             alt="Smart Buy Logo" 
-            style={{ height: '45px', width: 'auto', objectFit: 'contain' }} 
+            style={{ height: isScrolled ? '55px' : '70px', width: 'auto', objectFit: 'contain', transition: 'var(--transition)' }} 
             onError={(e) => {
-              // Fallback if logo fails to load
               e.currentTarget.style.display = 'none';
               const parent = e.currentTarget.parentElement;
               if (parent) {
@@ -141,15 +140,20 @@ const Hero = () => (
           aspectRatio: '1/1',
           maxHeight: '500px',
           display: 'flex',
+          flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
           overflow: 'hidden',
           boxShadow: '0 20px 50px rgba(0, 71, 171, 0.2)'
         }}>
-           <div style={{ color: 'white', textAlign: 'center', padding: '2rem' }}>
-              <ShoppingBag size={120} strokeWidth={1} style={{ marginBottom: '1rem', opacity: 0.8 }} />
-              <h3 style={{ fontSize: '2rem' }}>Smart Buy</h3>
-              <p style={{ opacity: 0.8 }}>Compramos por vos</p>
+           <img 
+              src="/logo.png" 
+              alt="Smart Buy Logo Large" 
+              style={{ width: '70%', height: 'auto', objectFit: 'contain', marginBottom: '2rem' }} 
+            />
+           <div style={{ color: 'white', textAlign: 'center' }}>
+              <h3 style={{ fontSize: '2.5rem' }}>Smart Buy</h3>
+              <p style={{ opacity: 0.8, fontSize: '1.2rem', letterSpacing: '0.1em' }}>Compramos por vos</p>
            </div>
         </div>
         
@@ -163,7 +167,7 @@ const Hero = () => (
           <CheckCircle2 color="var(--accent)" />
           <span style={{ fontWeight: 600 }}>Servicio Todo Incluido</span>
         </div>
-        </motion.div>
+      </motion.div>
         </div>
         </section>
         );
@@ -296,9 +300,14 @@ const Benefits = () => (
 );
 
 const Footer = () => (
-  <footer style={{ backgroundColor: '#0f172a', color: 'white', padding: '2rem 0' }}>
-    <div className="container">
-      <div style={{ textAlign: 'center', opacity: 0.8, fontSize: '0.9rem' }}>
+  <footer style={{ backgroundColor: '#0f172a', color: 'white', padding: '3rem 0' }}>
+    <div className="container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem' }}>
+      <img 
+        src="/logo.png" 
+        alt="Smart Buy Logo Footer" 
+        style={{ height: '50px', width: 'auto', objectFit: 'contain', opacity: 0.9 }} 
+      />
+      <div style={{ textAlign: 'center', opacity: 0.6, fontSize: '0.85rem', letterSpacing: '0.05em' }}>
         <p>© {new Date().getFullYear()} AXIS - Soluciones Digitales - Todos los derechos reservados.</p>
       </div>
     </div>
