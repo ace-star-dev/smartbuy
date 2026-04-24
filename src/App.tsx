@@ -150,7 +150,7 @@ const Hero = () => (
         <div style={{ 
           position: 'absolute', top: '10%', right: '-5%', 
           backgroundColor: 'white', padding: '1rem', borderRadius: '1rem', 
-          boxShadow: var(--shadow-lg), display: 'flex', alignItems: 'center', gap: '0.75rem'
+          boxShadow: 'var(--shadow-lg)', display: 'flex', alignItems: 'center', gap: '0.75rem'
         }}>
           <CheckCircle2 color="var(--accent)" />
           <span style={{ fontWeight: 600 }}>100% Seguro</span>
