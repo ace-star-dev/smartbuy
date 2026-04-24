@@ -163,21 +163,21 @@ const Hero = () => (
           <CheckCircle2 color="var(--accent)" />
           <span style={{ fontWeight: 600 }}>Servicio Todo Incluido</span>
         </div>
-      </motion.div>
-    </div>
-  </section>
-);
-);
+        </motion.div>
+        </div>
+        </section>
+        );
 
-const Steps = () => {
-  const steps = [
-    {
-      title: "Comprás Online",
-      desc: "Elegí tus productos favoritos en cualquier tienda del mundo.",
-      icon: <Globe size={32} />
-    },
-    {
-      title: "Enviás a nuestra Casilla",
+        const Steps = () => {
+        const steps = [
+        {
+        title: "Envianos tus links",
+        desc: "Elegí teus produtos e compartinos os links por WhatsApp.",
+        icon: <Globe size={32} />
+        },
+        {
+        title: "Realizamos la compra",
+
       desc: "Usás nuestra dirección en Miami o España como destino.",
       icon: <Package size={32} />
     },
