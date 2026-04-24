@@ -29,12 +29,25 @@ const Navbar = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'}`}>
       <div className="container flex justify-between items-center" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-          <div style={{ backgroundColor: 'var(--primary)', color: 'white', padding: '0.5rem', borderRadius: '0.5rem' }}>
-            <ShoppingBag size={24} />
-          </div>
-          <span style={{ fontSize: '1.5rem', fontWeight: 800, fontFamily: 'var(--font-display)', color: isScrolled ? 'var(--primary)' : 'var(--text-main)' }}>
-            Smart<span style={{ color: 'var(--secondary)' }}>Buy</span>
-          </span>
+          <img 
+            src="/logo.png" 
+            alt="Smart Buy Logo" 
+            style={{ height: '45px', width: 'auto', objectFit: 'contain' }} 
+            onError={(e) => {
+              // Fallback if logo fails to load
+              e.currentTarget.style.display = 'none';
+              const parent = e.currentTarget.parentElement;
+              if (parent) {
+                const span = document.createElement('span');
+                span.style.fontSize = '1.5rem';
+                span.style.fontWeight = '800';
+                span.style.fontFamily = 'var(--font-display)';
+                span.style.color = 'var(--primary)';
+                span.innerHTML = 'Smart<span style="color:var(--secondary)">Buy</span>';
+                parent.appendChild(span);
+              }
+            }}
+          />
         </div>
 
         {/* Desktop Links */}
@@ -284,49 +297,10 @@ const Benefits = () => (
 );
 
 const Footer = () => (
-  <footer style={{ backgroundColor: '#0f172a', color: 'white', padding: '4rem 0 2rem' }}>
+  <footer style={{ backgroundColor: '#0f172a', color: 'white', padding: '2rem 0' }}>
     <div className="container">
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '3rem', marginBottom: '3rem' }}>
-        <div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.5rem' }}>
-            <div style={{ backgroundColor: 'var(--primary)', color: 'white', padding: '0.4rem', borderRadius: '0.4rem' }}>
-              <ShoppingBag size={20} />
-            </div>
-            <span style={{ fontSize: '1.25rem', fontWeight: 800, fontFamily: 'var(--font-display)' }}>
-              Smart<span style={{ color: 'var(--secondary)' }}>Buy</span>
-            </span>
-          </div>
-          <p style={{ opacity: 0.6, fontSize: '0.9rem', lineHeight: 1.6 }}>
-            Tu aliado estratégico para traer tus compras del exterior a Paraguay de forma rápida y segura.
-          </p>
-        </div>
-        
-        <div>
-          <h4 style={{ marginBottom: '1.5rem', fontSize: '1.1rem' }}>Enlaces Rápidos</h4>
-          <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', opacity: 0.7, fontSize: '0.9rem' }}>
-            <li><a href="#como-funciona">Cómo Funciona</a></li>
-            <li><a href="#tiendas">Tiendas Populares</a></li>
-            <li><a href="#beneficios">Nuestros Beneficios</a></li>
-            <li><a href="https://wa.me/595987294206">Contacto</a></li>
-          </ul>
-        </div>
-        
-        <div>
-          <h4 style={{ marginBottom: '1.5rem', fontSize: '1.1rem' }}>Contacto</h4>
-          <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', opacity: 0.7, fontSize: '0.9rem' }}>
-            <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <MessageCircle size={18} /> +595 987 294206
-            </li>
-            <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <Camera size={18} /> @smartbuypy
-            </li>
-          </ul>
-        </div>
-      </div>
-      
-      <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '2rem', textAlign: 'center', opacity: 0.5, fontSize: '0.8rem' }}>
-        <p>© {new Date().getFullYear()} Smart Buy Paraguay. Todos los derechos reservados.</p>
-        <p style={{ marginTop: '0.5rem' }}>Desarrollado por AXIS - Soluciones Digitales</p>
+      <div style={{ textAlign: 'center', opacity: 0.8, fontSize: '0.9rem' }}>
+        <p>© {new Date().getFullYear()} AXIS - Soluciones Digitales - Todos los derechos reservados.</p>
       </div>
     </div>
   </footer>
