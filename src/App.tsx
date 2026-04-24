@@ -113,20 +113,17 @@ const Hero = () => (
           marginBottom: '1.5rem',
           display: 'inline-block'
         }}>
-          COMPRAS INTERNACIONALES SIN LÍMITES
+          PERSONAL SHOPPER & LOGÍSTICA
         </span>
         <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', marginBottom: '1.5rem', color: 'var(--text-main)' }}>
-          Traemos tus pedidos del <span style={{ color: 'var(--primary)' }}>Mundo</span> a <span style={{ color: 'var(--secondary)' }}>Paraguay</span>
+          Compramos por vos en el <span style={{ color: 'var(--primary)' }}>Mundo</span> y enviamos a <span style={{ color: 'var(--secondary)' }}>Paraguay</span>
         </h1>
         <p style={{ fontSize: '1.125rem', color: 'var(--text-muted)', marginBottom: '2.5rem', maxWidth: '500px' }}>
-          Comprá en Amazon, Shein, Shopee, AliExpress y eBay. Nosotros nos encargamos de la logística para que lo recibas en la puerta de tu casa.
+          Solo envianos los links de lo que querés (Amazon, Shein, AliExpress). Nosotros realizamos la compra, nos encargamos de todo y te lo entregamos.
         </p>
         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
           <a href="https://wa.me/595987294206" target="_blank" className="btn btn-primary" style={{ gap: '0.5rem', padding: '1rem 2rem' }}>
-            Hacer un Pedido <ChevronRight size={20} />
-          </a>
-          <a href="#como-funciona" className="btn" style={{ border: '1px solid #e2e8f0', backgroundColor: 'white' }}>
-            ¿Cómo funciona?
+            Enviar links para cotizar <ChevronRight size={20} />
           </a>
         </div>
       </motion.div>
@@ -150,9 +147,9 @@ const Hero = () => (
           boxShadow: '0 20px 50px rgba(0, 71, 171, 0.2)'
         }}>
            <div style={{ color: 'white', textAlign: 'center', padding: '2rem' }}>
-              <Package size={120} strokeWidth={1} style={{ marginBottom: '1rem', opacity: 0.8 }} />
-              <h3 style={{ fontSize: '2rem' }}>Smart Buy Logística</h3>
-              <p style={{ opacity: 0.8 }}>Miami • Madrid • China</p>
+              <ShoppingBag size={120} strokeWidth={1} style={{ marginBottom: '1rem', opacity: 0.8 }} />
+              <h3 style={{ fontSize: '2rem' }}>Smart Buy</h3>
+              <p style={{ opacity: 0.8 }}>Compramos por vos</p>
            </div>
         </div>
         
@@ -160,14 +157,16 @@ const Hero = () => (
         <div style={{ 
           position: 'absolute', top: '10%', right: '-5%', 
           backgroundColor: 'white', padding: '1rem', borderRadius: '1rem', 
-          boxShadow: 'var(--shadow-lg)', display: 'flex', alignItems: 'center', gap: '0.75rem'
+          boxShadow: 'var(--shadow-lg)', display: 'flex', alignItems: 'center', gap: '0.75rem',
+          zIndex: 10
         }}>
           <CheckCircle2 color="var(--accent)" />
-          <span style={{ fontWeight: 600 }}>100% Seguro</span>
+          <span style={{ fontWeight: 600 }}>Servicio Todo Incluido</span>
         </div>
       </motion.div>
     </div>
   </section>
+);
 );
 
 const Steps = () => {
