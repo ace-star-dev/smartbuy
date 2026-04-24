@@ -10,17 +10,14 @@ import {
   ArrowRight,
   CheckCircle2,
   Instagram,
-  Facebook,
-  Menu,
-  X
+  Menu
 } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 // --- Components ---
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -51,7 +48,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Toggle */}
-        <button className="md-hidden" style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'none' }} onClick={() => setMobileMenuOpen(true)}>
+        <button className="md-hidden" style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'none' }} onClick={() => {}}>
           <Menu size={28} />
         </button>
       </div>
