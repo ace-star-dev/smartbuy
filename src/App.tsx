@@ -318,7 +318,7 @@ const Footer = () => (
               <MessageCircle size={18} /> +595 987 294206
             </li>
             <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <Instagram size={18} /> @smartbuypy
+              <Camera size={18} /> @smartbuypy
             </li>
           </ul>
         </div>
