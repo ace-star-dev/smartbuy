@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { 
-  ShoppingBag, 
   Truck, 
   ShieldCheck, 
   MessageCircle, 
