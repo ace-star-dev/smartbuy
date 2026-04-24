@@ -9,7 +9,7 @@ import {
   Package, 
   ArrowRight,
   CheckCircle2,
-  Instagram,
+  Camera,
   Menu
 } from 'lucide-react';
 import { motion } from 'framer-motion';
