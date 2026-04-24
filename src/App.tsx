@@ -275,7 +275,7 @@ const Benefits = () => (
             Nos enorgullecemos de ofrecer el mejor servicio de Courier en Paraguay. Miles de clientes ya confían en nosotros para sus importações.
           </p>
           <a href="https://www.instagram.com/smartbuypy/" target="_blank" className="btn" style={{ backgroundColor: 'var(--text-main)', color: 'white', gap: '0.5rem' }}>
-            <Instagram size={20} /> Ver nuestro Instagram
+            <Camera size={20} /> Ver nuestro Instagram
           </a>
         </div>
       </div>
