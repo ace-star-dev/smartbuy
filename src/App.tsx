@@ -426,7 +426,7 @@ const Benefits = () => {
               
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 <a href="https://www.instagram.com/smartbuypy/" target="_blank" className="btn" style={{ backgroundColor: 'white', color: '#0f172a', width: '100%', gap: '0.75rem', padding: '1rem' }}>
-                  <Instagram size={20} /> Ver nuestro Instagram
+                  <Camera size={20} /> Ver nuestro Instagram
                 </a>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', fontSize: '0.875rem', opacity: 0.6 }}>
                   <Clock size={14} /> Atención de Lun a Vie: 08:00 - 18:00
@@ -499,7 +499,7 @@ const Footer = () => (
           <ul style={{ display: 'flex', flexDirection: 'column', gap: '1rem', opacity: 0.7 }}>
             <li style={{ display: 'flex', gap: '0.75rem' }}><MapPin size={18} className="text-secondary" /> Salto del Guairá, Paraguay</li>
             <li style={{ display: 'flex', gap: '0.75rem' }}><Phone size={18} className="text-secondary" /> +595 987 294206</li>
-            <li style={{ display: 'flex', gap: '0.75rem' }}><Instagram size={18} className="text-secondary" /> @smartbuypy</li>
+            <li style={{ display: 'flex', gap: '0.75rem' }}><Camera size={18} className="text-secondary" /> @smartbuypy</li>
           </ul>
         </div>
 
