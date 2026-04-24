@@ -497,7 +497,7 @@ const Footer = () => (
         <div>
           <h4 style={{ fontSize: '1.1rem', marginBottom: '1.5rem' }}>Contacto</h4>
           <ul style={{ display: 'flex', flexDirection: 'column', gap: '1rem', opacity: 0.7 }}>
-            <li style={{ display: 'flex', gap: '0.75rem' }}><MapPin size={18} className="text-secondary" /> Salto del Guairá, Paraguay</li>
+            <li style={{ display: 'flex', gap: '0.75rem' }}><MapPin size={18} className="text-secondary" /> Katueté, Paraguay</li>
             <li style={{ display: 'flex', gap: '0.75rem' }}><Phone size={18} className="text-secondary" /> +595 987 294206</li>
             <li style={{ display: 'flex', gap: '0.75rem' }}><Camera size={18} className="text-secondary" /> @smartbuypy</li>
           </ul>
